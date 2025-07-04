@@ -1,4 +1,3 @@
 
 #include "rogdf.h"
-
-#include "RcppExports.cpp"
+#include "RcppExports.h"

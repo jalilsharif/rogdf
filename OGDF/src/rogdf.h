@@ -38,9 +38,12 @@ NumericMatrix rogdf_circular_layout(GraphAttributes graph,
 	 double minDistSibling, double minDistCC, double pageRatio);
 
 NumericMatrix rogdf_tree_layout(GraphAttributes graph,
-	 double siblingDistance, double subtreeDistance,
-	 double levelDistance, double treeDistance,
-	 bool orthogonalLayout, Orientation orientation,
-	 TreeLayout::RootSelectionType selectRoot);
+         double siblingDistance, double subtreeDistance,
+         double levelDistance, double treeDistance,
+         bool orthogonalLayout, Orientation orientation,
+         TreeLayout::RootSelectionType selectRoot);
+
+NumericMatrix rogdf_fmmm_layout(GraphAttributes graph,
+        ROGDF_FMMM_Options options);
 
 #endif
