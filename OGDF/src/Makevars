@@ -6,6 +6,7 @@ OGDF_SOURCE_DIR := $(shell \
     elif [ -d orig ]; then echo orig; \
     else echo ogdf; fi)
 
-SOURCES := $(shell find $(OGDF_SOURCE_DIR) -name "*.cpp")
+OGDF_SOURCES := $(shell find $(OGDF_SOURCE_DIR) -name "*.cpp")
+SOURCES := $(OGDF_SOURCES) RcppExports.cpp rogdf.cpp convert.cpp
 OBJECTS := $(SOURCES:.cpp=.o)
 PKG_LIBS=-lOsiClp -lClp -lCoinUtils
