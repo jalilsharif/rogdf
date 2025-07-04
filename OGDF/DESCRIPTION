@@ -11,3 +11,4 @@ Description: OGDF is a self-contained C++ class library for the automatic
 License: GPL (>= 2)
 Imports: Rcpp (>= 0.11.0)
 LinkingTo: Rcpp
+SystemRequirements: OGDF, COIN-OR CLP
