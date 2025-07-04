@@ -4,6 +4,7 @@ all: OGDF/src/Makevars OGDF/src/RcppExports.cpp
 SOURCES=rogdf_wrapper.cpp rogdf.cpp convert.cpp
 OBJECTS=rogdf_wrapper.o   rogdf.o   convert.o
 	
+
 OGDF_SRC_DIR := $(shell \
 if [ -d OGDF/src/ogdf ]; then echo ogdf; \
 elif [ -d OGDF/src/src ]; then echo src; \
