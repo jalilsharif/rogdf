@@ -1,5 +1,11 @@
 PKG_CPPFLAGS=-I. -DUSE_COIN -DCOIN_OSI_CLP
-OGDF_SOURCE_DIR := orig
+
+OGDF_SOURCE_DIR := $(shell \
+    if [ -d ogdf ]; then echo ogdf; \
+    elif [ -d src ]; then echo src; \
+    elif [ -d orig ]; then echo orig; \
+    else echo ogdf; fi)
+
 SOURCES := $(shell find $(OGDF_SOURCE_DIR) -name "*.cpp")
 OBJECTS := $(SOURCES:.cpp=.o)
 PKG_LIBS=-lOsiClp -lClp -lCoinUtils
