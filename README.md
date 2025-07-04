@@ -24,6 +24,11 @@ library(devtools)
 install_github("igraph/rogdf/OGDF")
 ```
 
+Make sure that the OGDF library and the COIN-OR CLP solver are
+installed on your system before installing the package.  On Debian
+based systems the `coinor-libclp-dev` and `coinor-libosi-dev`
+packages provide the required headers and libraries.
+
 ### Try it out
 
 ```
